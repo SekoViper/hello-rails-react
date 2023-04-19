@@ -1,8 +1,8 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const getMessage = createAsyncThunk("greeting", async () => {
+const getMessage = createAsyncThunk('greeting', async () => {
   try {
-    const message = await fetch("http://127.0.0.1:3000/message");
+    const message = await fetch('http://127.0.0.1:3000/message');
     const data = await message.json();
     if (!data.message) {
       return {
